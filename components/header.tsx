@@ -34,7 +34,7 @@ export function Header() {
             <div className="h-8 w-8 rounded-full bg-[#ea9276] flex items-center justify-center">
               <span className="font-bold text-white">A</span>
             </div>
-            <span className="text-lg font-bold">AppName</span>
+            <span className="text-lg font-bold">App</span>
           </Link>
         </div>
         <div className="flex items-center gap-4">
