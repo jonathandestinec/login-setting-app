@@ -164,10 +164,27 @@ export function LoginForm() {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-3">
-          <SocialButton provider="google" color="#F2F2F2" />
-          <SocialButton provider="microsoft" color="#00A3EE" />
-          <SocialButton provider="facebook" color="#0081FB" />
-          <SocialButton provider="discord" color="#5865F2" />
+          <SocialButton
+            provider="google"
+            color="#F2F2F2"
+            className="bg-[#F2F2F2] hover:bg-[#E4E4E4]"
+          />
+          <SocialButton
+            provider="microsoft"
+            color="#00A3EE"
+            className="bg-[#00A3EE] hover:bg-[#0099FF]"
+          />
+          <SocialButton
+            provider="facebook"
+            color="#0081FB"
+            className="bg-[#0081FB] hover:bg-[#0077E4]"
+          />
+          <SocialButton
+            provider="discord"
+            color="#5865F2"
+
+            className="bg-[#5865F2] hover:bg-[#4757B9]"
+          />
         </div>
       </div>
     </Card>
