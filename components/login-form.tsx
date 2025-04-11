@@ -29,7 +29,8 @@ export function LoginForm() {
   }
 
   return (
-    <Card className="w-full max-w-md border-none shadow-2xl bg-[#1a1a1a]">
+    <Card className="w-full max-w-md border-none shadow-2xl bg-[#1a1a1a] relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#ea9276] to-transparent"></div>
       <CardHeader className="space-y-1 text-center">
         <CardTitle className="text-2xl font-bold text-white">Welcome to company</CardTitle>
         <CardDescription className="text-gray-400">Log in to your account to continue</CardDescription>
@@ -59,7 +60,7 @@ export function LoginForm() {
                 <Input
                   id="email"
                   placeholder="Enter your email or username"
-                  className="bg-[#222222] border-[#333333] text-white"
+                  className="bg-[#222222] border-[#333333] text-white focus:border-[#ea9276] focus:ring-[#ea9276]"
                 />
               </div>
               <div className="space-y-2">
@@ -76,11 +77,11 @@ export function LoginForm() {
                     id="password"
                     type={showPassword ? "text" : "password"}
                     placeholder="Enter your password"
-                    className="bg-[#222222] border-[#333333] text-white pr-10"
+                    className="bg-[#222222] border-[#333333] text-white pr-10 focus:border-[#ea9276] focus:ring-[#ea9276]"
                   />
                   <button
                     type="button"
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-[#ea9276]"
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
@@ -105,7 +106,7 @@ export function LoginForm() {
                 <Input
                   id="username"
                   placeholder="Choose a username"
-                  className="bg-[#222222] border-[#333333] text-white"
+                  className="bg-[#222222] border-[#333333] text-white focus:border-[#ea9276] focus:ring-[#ea9276]"
                 />
               </div>
               <div className="space-y-2">
@@ -116,7 +117,7 @@ export function LoginForm() {
                   id="signup-email"
                   type="email"
                   placeholder="Enter your email"
-                  className="bg-[#222222] border-[#333333] text-white"
+                  className="bg-[#222222] border-[#333333] text-white focus:border-[#ea9276] focus:ring-[#ea9276]"
                 />
               </div>
               <div className="space-y-2">
@@ -128,11 +129,11 @@ export function LoginForm() {
                     id="signup-password"
                     type={showPassword ? "text" : "password"}
                     placeholder="Create a password"
-                    className="bg-[#222222] border-[#333333] text-white pr-10"
+                    className="bg-[#222222] border-[#333333] text-white pr-10 focus:border-[#ea9276] focus:ring-[#ea9276]"
                   />
                   <button
                     type="button"
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-[#ea9276]"
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
@@ -143,7 +144,11 @@ export function LoginForm() {
                 <Label htmlFor="birthday" className="text-white">
                   Birthday
                 </Label>
-                <Input id="birthday" type="date" className="bg-[#222222] border-[#333333] text-white" />
+                <Input
+                  id="birthday"
+                  type="date"
+                  className="bg-[#222222] border-[#333333] text-white focus:border-[#ea9276] focus:ring-[#ea9276]"
+                />
               </div>
             </CardContent>
             <CardFooter className="flex flex-col">
@@ -164,27 +169,10 @@ export function LoginForm() {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-3">
-          <SocialButton
-            provider="google"
-            color="#F2F2F2"
-            className="bg-[#F2F2F2] hover:bg-[#E4E4E4]"
-          />
-          <SocialButton
-            provider="microsoft"
-            color="#00A3EE"
-            className="bg-[#00A3EE] hover:bg-[#0099FF]"
-          />
-          <SocialButton
-            provider="facebook"
-            color="#0081FB"
-            className="bg-[#0081FB] hover:bg-[#0077E4]"
-          />
-          <SocialButton
-            provider="discord"
-            color="#5865F2"
-
-            className="bg-[#5865F2] hover:bg-[#4757B9]"
-          />
+          <SocialButton provider="google" className="bg-[#F2F2F2] hover:bg-[#E4E4E4]" />
+          <SocialButton provider="microsoft" className="bg-[#00A3EE] hover:bg-[#0099FF]" />
+          <SocialButton provider="facebook" className="bg-[#0081FB] hover:bg-[#0077E4]" />
+          <SocialButton provider="discord" className="bg-[#5865F2] hover:bg-[#4757B9]" />
         </div>
       </div>
     </Card>

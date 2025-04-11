@@ -72,12 +72,13 @@ export function SettingsTabs() {
         </TabsTrigger>
       </TabsList>
       <TabsContent value="profile" className="space-y-6 mt-6">
-        <Card className="bg-[#1a1a1a] border-[#333333]">
+        <Card className="bg-[#1a1a1a] border-[#333333] border-l-[3px] border-l-[#ea9276] overflow-hidden relative">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#ea9276]/30 to-transparent"></div>
           <CardContent className="p-6">
             <h3 className="text-xl font-bold mb-4">Profile Picture</h3>
             <div className="flex items-start gap-6">
               <div className="relative">
-                <div className="w-24 h-24 rounded-full overflow-hidden bg-[#222222] flex items-center justify-center">
+                <div className="w-24 h-24 rounded-full overflow-hidden bg-[#222222] flex items-center justify-center border-2 border-[#ea9276]/20">
                   {avatar ? (
                     <Image src={avatar || "/placeholder.svg"} alt="Avatar" fill className="object-cover" />
                   ) : (
@@ -106,7 +107,11 @@ export function SettingsTabs() {
                     className="hidden"
                     onChange={handleAvatarChange}
                   />
-                  <Button asChild variant="outline" className="bg-[#222222] border-[#333333] hover:bg-[#333333]">
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="bg-[#222222] border-[#333333] hover:bg-[#333333] hover:text-[#ea9276]"
+                  >
                     <label htmlFor="avatar-upload" className="flex items-center gap-2 cursor-pointer">
                       <Upload className="h-4 w-4" />
                       Upload Image
@@ -119,11 +124,12 @@ export function SettingsTabs() {
           </CardContent>
         </Card>
 
-        <Card className="bg-[#1a1a1a] border-[#333333]">
+        <Card className="bg-[#1a1a1a] border-[#333333] border-l-[3px] border-l-[#ea9276] overflow-hidden relative">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#ea9276]/30 to-transparent"></div>
           <CardContent className="p-6">
             <h3 className="text-xl font-bold mb-4">Profile Banner</h3>
             <div className="space-y-4">
-              <div className="relative w-full h-32 rounded-md overflow-hidden bg-[#222222]">
+              <div className="relative w-full h-32 rounded-md overflow-hidden bg-[#222222] border border-[#333333]">
                 {banner ? (
                   <Image src={banner || "/placeholder.svg"} alt="Banner" fill className="object-cover" />
                 ) : (
@@ -140,7 +146,11 @@ export function SettingsTabs() {
                   className="hidden"
                   onChange={handleBannerChange}
                 />
-                <Button asChild variant="outline" className="bg-[#222222] border-[#333333] hover:bg-[#333333]">
+                <Button
+                  asChild
+                  variant="outline"
+                  className="bg-[#222222] border-[#333333] hover:bg-[#333333] hover:text-[#ea9276]"
+                >
                   <label htmlFor="banner-upload" className="flex items-center gap-2 cursor-pointer">
                     <Upload className="h-4 w-4" />
                     Upload Banner
@@ -155,7 +165,8 @@ export function SettingsTabs() {
           </CardContent>
         </Card>
 
-        <Card className="bg-[#1a1a1a] border-[#333333]">
+        <Card className="bg-[#1a1a1a] border-[#333333] border-l-[3px] border-l-[#ea9276] overflow-hidden relative">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#ea9276]/30 to-transparent"></div>
           <CardContent className="p-6">
             <h3 className="text-xl font-bold mb-4">Profile Settings</h3>
             <p className="text-gray-400 mb-4">Change identifying details for your account</p>
@@ -167,9 +178,13 @@ export function SettingsTabs() {
                     id="username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
-                    className="bg-[#222222] border-[#333333] text-white"
+                    className="bg-[#222222] border-[#333333] text-white focus:border-[#ea9276] focus:ring-[#ea9276]"
                   />
-                  <Button size="icon" variant="outline" className="bg-[#222222] border-[#333333] hover:bg-[#333333]">
+                  <Button
+                    size="icon"
+                    variant="outline"
+                    className="bg-[#222222] border-[#333333] hover:bg-[#333333] hover:text-[#ea9276]"
+                  >
                     <Pencil className="h-4 w-4" />
                   </Button>
                 </div>
@@ -183,7 +198,7 @@ export function SettingsTabs() {
                   value={displayName}
                   onChange={(e) => setDisplayName(e.target.value)}
                   placeholder="Customize how your name appears"
-                  className="bg-[#222222] border-[#333333] text-white"
+                  className="bg-[#222222] border-[#333333] text-white focus:border-[#ea9276] focus:ring-[#ea9276]"
                 />
                 <p className="text-xs text-gray-400">Customize capitalization for your username</p>
               </div>
@@ -195,7 +210,7 @@ export function SettingsTabs() {
                   value={bio}
                   onChange={(e) => setBio(e.target.value)}
                   placeholder="Tell us about yourself"
-                  className="bg-[#222222] border-[#333333] text-white resize-none min-h-[100px]"
+                  className="bg-[#222222] border-[#333333] text-white resize-none min-h-[100px] focus:border-[#ea9276] focus:ring-[#ea9276]"
                 />
               </div>
 
@@ -206,7 +221,8 @@ export function SettingsTabs() {
       </TabsContent>
 
       <TabsContent value="account" className="space-y-6 mt-6">
-        <Card className="bg-[#1a1a1a] border-[#333333]">
+        <Card className="bg-[#1a1a1a] border-[#333333] border-l-[3px] border-l-[#ea9276] overflow-hidden relative">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#ea9276]/30 to-transparent"></div>
           <CardContent className="p-6">
             <h3 className="text-xl font-bold mb-4">Account Information</h3>
             <div className="space-y-4">
@@ -218,13 +234,17 @@ export function SettingsTabs() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="your.email@example.com"
-                  className="bg-[#222222] border-[#333333] text-white"
+                  className="bg-[#222222] border-[#333333] text-white focus:border-[#ea9276] focus:ring-[#ea9276]"
                 />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="birthday">Birthday</Label>
-                <Input id="birthday" type="date" className="bg-[#222222] border-[#333333] text-white" />
+                <Input
+                  id="birthday"
+                  type="date"
+                  className="bg-[#222222] border-[#333333] text-white focus:border-[#ea9276] focus:ring-[#ea9276]"
+                />
               </div>
 
               <Button className="bg-[#ea9276] hover:bg-[#d87e66] text-white">Update Account</Button>
@@ -234,7 +254,8 @@ export function SettingsTabs() {
       </TabsContent>
 
       <TabsContent value="security" className="space-y-6 mt-6">
-        <Card className="bg-[#1a1a1a] border-[#333333]">
+        <Card className="bg-[#1a1a1a] border-[#333333] border-l-[3px] border-l-[#ea9276] overflow-hidden relative">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#ea9276]/30 to-transparent"></div>
           <CardContent className="p-6">
             <h3 className="text-xl font-bold mb-4">Change Password</h3>
             <div className="space-y-4">
@@ -244,7 +265,7 @@ export function SettingsTabs() {
                   id="current-password"
                   type="password"
                   placeholder="Enter your current password"
-                  className="bg-[#222222] border-[#333333] text-white"
+                  className="bg-[#222222] border-[#333333] text-white focus:border-[#ea9276] focus:ring-[#ea9276]"
                 />
               </div>
 
@@ -254,7 +275,7 @@ export function SettingsTabs() {
                   id="new-password"
                   type="password"
                   placeholder="Enter your new password"
-                  className="bg-[#222222] border-[#333333] text-white"
+                  className="bg-[#222222] border-[#333333] text-white focus:border-[#ea9276] focus:ring-[#ea9276]"
                 />
               </div>
 
@@ -264,7 +285,7 @@ export function SettingsTabs() {
                   id="confirm-password"
                   type="password"
                   placeholder="Confirm your new password"
-                  className="bg-[#222222] border-[#333333] text-white"
+                  className="bg-[#222222] border-[#333333] text-white focus:border-[#ea9276] focus:ring-[#ea9276]"
                 />
               </div>
 
@@ -275,7 +296,8 @@ export function SettingsTabs() {
       </TabsContent>
 
       <TabsContent value="notifications" className="space-y-6 mt-6">
-        <Card className="bg-[#1a1a1a] border-[#333333]">
+        <Card className="bg-[#1a1a1a] border-[#333333] border-l-[3px] border-l-[#ea9276] overflow-hidden relative">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#ea9276]/30 to-transparent"></div>
           <CardContent className="p-6">
             <h3 className="text-xl font-bold mb-4">Notification Preferences</h3>
             <div className="space-y-4">
@@ -285,7 +307,7 @@ export function SettingsTabs() {
                   <input
                     type="checkbox"
                     id="email-notifications"
-                    className="h-4 w-4 rounded border-[#333333] bg-[#222222] text-[#ea9276]"
+                    className="h-4 w-4 rounded border-[#333333] bg-[#222222] text-[#ea9276] focus:ring-[#ea9276]"
                   />
                   <Label htmlFor="email-notifications">Email Notifications</Label>
                 </div>
@@ -293,7 +315,7 @@ export function SettingsTabs() {
                   <input
                     type="checkbox"
                     id="push-notifications"
-                    className="h-4 w-4 rounded border-[#333333] bg-[#222222] text-[#ea9276]"
+                    className="h-4 w-4 rounded border-[#333333] bg-[#222222] text-[#ea9276] focus:ring-[#ea9276]"
                   />
                   <Label htmlFor="push-notifications">Push Notifications</Label>
                 </div>
@@ -301,7 +323,7 @@ export function SettingsTabs() {
                   <input
                     type="checkbox"
                     id="marketing-emails"
-                    className="h-4 w-4 rounded border-[#333333] bg-[#222222] text-[#ea9276]"
+                    className="h-4 w-4 rounded border-[#333333] bg-[#222222] text-[#ea9276] focus:ring-[#ea9276]"
                   />
                   <Label htmlFor="marketing-emails">Marketing Emails</Label>
                 </div>
