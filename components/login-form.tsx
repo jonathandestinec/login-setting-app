@@ -31,7 +31,7 @@ export function LoginForm() {
   return (
     <Card className="w-full max-w-md border-none shadow-2xl bg-[#1a1a1a]">
       <CardHeader className="space-y-1 text-center">
-        <CardTitle className="text-2xl font-bold text-white">Welcome back</CardTitle>
+        <CardTitle className="text-2xl font-bold text-white">Welcome to company</CardTitle>
         <CardDescription className="text-gray-400">Log in to your account to continue</CardDescription>
       </CardHeader>
       <Tabs defaultValue="login" className="w-full">
@@ -89,7 +89,7 @@ export function LoginForm() {
               </div>
             </CardContent>
             <CardFooter className="flex flex-col">
-              <Button type="submit" className="w-full bg-[#ea9276] hover:bg-[#d87e66] text-white">
+              <Button type="submit" className="w-full bg-[#ea9276] hover:bg-[#d87e66] text-white mt-10">
                 Login
               </Button>
             </CardFooter>
@@ -147,7 +147,7 @@ export function LoginForm() {
               </div>
             </CardContent>
             <CardFooter className="flex flex-col">
-              <Button type="submit" className="w-full bg-[#ea9276] hover:bg-[#d87e66] text-white">
+              <Button type="submit" className="w-full bg-[#ea9276] hover:bg-[#d87e66] text-white mt-10">
                 Sign Up
               </Button>
             </CardFooter>
