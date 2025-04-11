@@ -60,6 +60,7 @@ export function LoginForm() {
                 <Input
                   id="email"
                   placeholder="Enter your email or username"
+                  style={{ caretColor: "#ea9276" }}
                   className="bg-[#222222] border-[#333333] text-white focus:border-[#ea9276] focus:ring-[#ea9276]"
                 />
               </div>
@@ -77,6 +78,7 @@ export function LoginForm() {
                     id="password"
                     type={showPassword ? "text" : "password"}
                     placeholder="Enter your password"
+                    style={{ caretColor: "#ea9276" }}
                     className="bg-[#222222] border-[#333333] text-white pr-10 focus:border-[#ea9276] focus:ring-[#ea9276]"
                   />
                   <button
